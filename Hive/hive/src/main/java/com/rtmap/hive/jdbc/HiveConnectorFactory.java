@@ -1,4 +1,4 @@
-package cn.zxw.hive.common;
+package com.rtmap.hive.jdbc;
 
 import java.sql.Connection;
 import java.sql.SQLException;

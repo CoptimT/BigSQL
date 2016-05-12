@@ -3,7 +3,7 @@ package cn.zxw.hive.dao;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import cn.zxw.hive.common.HiveJdbcOperator;
+import com.rtmap.hive.jdbc.HiveJdbcOperator;
 
 public class QueryDao {
 
