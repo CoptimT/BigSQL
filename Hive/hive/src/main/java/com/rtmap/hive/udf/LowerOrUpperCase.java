@@ -9,17 +9,13 @@ public class LowerOrUpperCase extends UDF {
 
 	// 根据需要可自定义多个参数不同的evaluate方法
 	public Text evaluate(Text text, String lowerOrUpper) {
-		if (text == null) {
-			return null;
-		}
-		if (LOWERTOUPPER.equals(lowerOrUpper)) {
-			return new Text(text.toString().toUpperCase());
-		} else if (UPPERTOLOWER.equals(lowerOrUpper)) {
-			return new Text(text.toString().toLowerCase());
+		if (text != null) {
+			if (LOWERTOUPPER.equals(lowerOrUpper)) {
+				return new Text(text.toString().toUpperCase());
+			} else if (UPPERTOLOWER.equals(lowerOrUpper)) {
+				return new Text(text.toString().toLowerCase());
+			}
 		}
 		return null;
 	}
-	
-	//String execAdd = "alter table " + table + " add partition (p_build_id='" + buildId + "', p_date='" + date + "') location '" + path + buildId + "/" + date + "/'";
-    //hiveJdbcOperator.executeUpdate(execAdd);
 }
